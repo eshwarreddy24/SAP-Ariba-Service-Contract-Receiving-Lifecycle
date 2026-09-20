@@ -1,0 +1,42 @@
+name: Import service-contract evidence
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/import-evidence.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Import preserved SAP Ariba screenshots
+        run: |
+          mkdir -p evidence
+          base="https://raw.githubusercontent.com/eshwarreddy24/SAP-Ariba-Contract-Compliance-P2P-Project/main/assets"
+          curl -fsSL "$base/01_service_item_pricing.png" -o evidence/01_service_item_pricing.png
+          curl -fsSL "$base/02_contract_limits.png" -o evidence/02_contract_limits.png
+          curl -fsSL "$base/03_milestone_configuration.png" -o evidence/03_milestone_configuration.png
+          curl -fsSL "$base/04_milestone_verification.png" -o evidence/04_milestone_verification.png
+          curl -fsSL "$base/05_contract_summary.png" -o evidence/05_contract_summary.png
+          curl -fsSL "$base/06_pricing_terms_summary.png" -o evidence/06_pricing_terms_summary.png
+          curl -fsSL "$base/07_receipt_60_hours.png" -o evidence/07_receipt_60_hours.png
+          curl -fsSL "$base/08_receiving_done.png" -o evidence/08_receiving_done.png
+
+      - name: Commit imported evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add evidence
+          if git diff --cached --quiet; then
+            echo "Evidence already current."
+          else
+            git commit -m "Import preserved service-contract screenshots"
+            git push
+          fi
