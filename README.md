@@ -29,7 +29,9 @@ Hands-on Procure-to-Pay case study focused on **no-release service contracts, re
 
 ## Evidence
 
-The screenshots in `evidence/` cover service pricing, contract limits, pricing terms, milestone setup/verification, receipt entry and final receiving confirmation.
+![Service contract, pricing, receiving and catalog validation](evidence/01_service_contract_evidence.jpg)
+
+The evidence set covers service contract setup, spend controls and receiving completion. Additional individual screenshots remain preserved in the original SAP Ariba portfolio repository.
 
 ## Skills demonstrated
 
