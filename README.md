@@ -29,9 +29,25 @@ Hands-on Procure-to-Pay case study focused on **no-release service contracts, re
 
 ## Evidence
 
-![Service contract, pricing, receiving and catalog validation](evidence/01_service_contract_evidence.jpg)
+### Service pricing and limits
+![Service item pricing](evidence/01_service_item_pricing.png)
 
-The evidence set covers service contract setup, spend controls and receiving completion. Additional individual screenshots remain preserved in the original SAP Ariba portfolio repository.
+![Contract limits](evidence/02_contract_limits.png)
+
+### Milestone controls
+![Milestone configuration](evidence/03_milestone_configuration.png)
+
+![Milestone verification](evidence/04_milestone_verification.png)
+
+### Contract and pricing review
+![Contract summary](evidence/05_contract_summary.png)
+
+![Pricing terms](evidence/06_pricing_terms_summary.png)
+
+### Service receiving
+![60-hour receipt](evidence/07_receipt_60_hours.png)
+
+![Receiving complete](evidence/08_receiving_done.png)
 
 ## Skills demonstrated
 
